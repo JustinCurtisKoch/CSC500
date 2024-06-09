@@ -12,6 +12,9 @@ class ItemToPurchase:
         self.item_price = item_price
         self.item_quantity = item_quantity
 
+    def print_item_cost(self):
+        print(f"{self.item_name} {self.item_quantity} @ ${self.item_price} = ${self.item_price * self.item_quantity}")
+
 # Creates a ShoppingCart class to accept user info and manipulate the cart.
 class ShoppingCart:
     def __init__(self, customer_name="none", current_date=None,):
@@ -118,7 +121,7 @@ def main():
             print(f"{customer_name}, thank you for shopping!")
             break
         else:
-            print("Invalid choice. Please try again.")
+            print("Oops, Invalid choice. Please try again.")
 
 # Run the main function
 main()
